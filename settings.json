@@ -148,9 +148,18 @@
       "Bash(npm install --global:*)",
       "Bash(npm i -g:*)",
       "Bash(npm i --global:*)",
+      "Bash(rm -rf: *)"
+    ],
+    "ask": [
+      "Edit(*CLAUDE.md)",
+      "Edit(*CLAUDE.local.md)",
+      "Write(*CLAUDE.md)",
+      "Write(*CLAUDE.local.md)",
+      "MultiEdit(*CLAUDE.md)",
+      "MultiEdit(*CLAUDE.local.md)",
       "Bash(op)",
       "Bash(op:*)",
-      "Bash(rm -rf: *)"
+      "Bash(open:*)"
     ]
   },
   "model": "opus",
