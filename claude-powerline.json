@@ -1,40 +1,67 @@
 {
+  "theme": "custom",
   "display": {
+    "style": "powerline",
     "lines": [
       {
         "segments": {
-          "directory": {
-            "enabled": true,
-            "showBasename": true
-          },
-          "git": {
-            "enabled": true,
-            "showSha": false,
-            "showWorkingTree": true,
-            "showOperation": true,
-            "showTag": false,
-            "showTimeSinceCommit": false,
-            "showStashCount": false,
-            "showUpstream": false,
-            "showRepoName": false
-          },
-          "model": { "enabled": false },
-          "session": { "enabled": false, "type": "both" },
-          "block": { "enabled": false, "type": "both" },
-          "today": { "enabled": false, "type": "both" },
-          "context": { "enabled": true },
-          "tmux": { "enabled": false },
+          "directory": { "enabled": true, "showBasename": true },
+          "model": { "enabled": true },
+          "session": { "enabled": true, "type": "cost", "costSource": "official", "burnType": "cost" },
+          "today": { "enabled": true, "type": "cost", "burnType": "cost" }
+        }
+      },
+      {
+        "segments": {
+          "block": { "enabled": true, "type": "weighted", "burnType": "cost" },
+          "version": { "enabled": true },
           "metrics": {
             "enabled": true,
-            "showResponseTime": false,
-            "showDuration": false,
+            "showResponseTime": true,
+            "showLastResponseTime": true,
+            "showDuration": true,
             "showMessageCount": true,
-            "showCostBurnRate": false,
-            "showTokenBurnRate": false
+            "showLinesAdded": true,
+            "showLinesRemoved": true
           },
-          "version": { "enabled": true }
+          "context": { "enabled": true, "showPercentageOnly": false },
+          "tmux": { "enabled": false }
+        }
+      },
+      {
+        "segments": {
+          "git": {
+            "enabled": true,
+            "showSha": true,
+            "showWorkingTree": true,
+            "showOperation": true,
+            "showTag": true,
+            "showTimeSinceCommit": true,
+            "showStashCount": true,
+            "showUpstream": true,
+            "showRepoName": true
+          }
         }
       }
     ]
+  },
+  "colors": {
+    "custom": {
+      "directory": { "bg": "#2a2a2a", "fg": "#e0e0e0" },
+      "git": { "bg": "#3a3a3a", "fg": "#d0d0d0" },
+      "model": { "bg": "#4a4a4a", "fg": "#c0c0c0" },
+      "session": { "bg": "#5a5a5a", "fg": "#b0b0b0" },
+      "block": { "bg": "#404040", "fg": "#cccccc" },
+      "today": { "bg": "#303030", "fg": "#dddddd" },
+      "tmux": { "bg": "#8a8a8a", "fg": "#2a2a2a" },
+      "context": { "bg": "#6a6a6a", "fg": "#ffffff" },
+      "metrics": { "bg": "#565656", "fg": "#e5e5e5" },
+      "version": { "bg": "#7a7a7a", "fg": "#f0f0f0" }
+    }
+  },
+  "budget": {
+    "session": { "warningThreshold": 80 },
+    "today": { "amount": 5.0, "warningThreshold": 80 },
+    "block": { "amount": 50, "type": "cost", "warningThreshold": 80 }
   }
 }
