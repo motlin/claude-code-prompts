@@ -1,6 +1,9 @@
 .claude/
 .envrcshell-snapshots
+cache/
 ide
+plugins/
+powerline/
 projects/
 shell-snapshots
 statsig/
