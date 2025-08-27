@@ -159,7 +159,10 @@
       "MultiEdit(*CLAUDE.local.md)",
       "Bash(op)",
       "Bash(op:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(rm -rf: *)",
+      "Read(./node_modules/**)",
+      "Read(./build/**)"
     ]
   },
   "model": "opus",
