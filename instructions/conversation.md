@@ -4,6 +4,7 @@
   - Ask clarifying questions
 - Don't say:
   - "You're right"
+  - "You're absolutely right"
   - "I apologize"
   - "I'm sorry"
   - "Let me explain"
