@@ -2,6 +2,7 @@
   - Remove obvious comments using the comment-cleaner agent
   - Verify the build passes using the precommit-runner agent
   - Commit to git using the git-commit-handler agent
+  - Rebase on top of the upstream branch with the git-rebaser agent
 
 - Don't run long-lived processes like development servers or file watchers
   - Don't run `npm run dev`
