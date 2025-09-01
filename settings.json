@@ -138,42 +138,50 @@
       "Bash(git add -A:*)",
       "Bash(git add -f:*)",
       "Bash(git commit -a:*)",
-      "Bash(git push:*)",
-      "Bash(git worktree remove --force:*)",
+      "Bash(npm i --global:*)",
+      "Bash(npm i -g:*)",
+      "Bash(npm install --global:*)",
+      "Bash(npm install -g:*)",
       "Bash(npm run dev:*)",
       "Bash(npm run serve:*)",
       "Bash(npm run start &)",
       "Bash(npm run start:*)",
-      "Bash(npm install -g:*)",
-      "Bash(npm install --global:*)",
-      "Bash(npm i -g:*)",
-      "Bash(npm i --global:*)",
-      "Bash(rm -rf: *)"
-    ],
-    "ask": [
-      "Edit(*CLAUDE.md)",
-      "Edit(*CLAUDE.local.md)",
-      "Write(*CLAUDE.md)",
-      "Write(*CLAUDE.local.md)",
-      "MultiEdit(*CLAUDE.md)",
-      "MultiEdit(*CLAUDE.local.md)",
+
+      "Bash(git push:*)",
+      "Bash(git worktree remove --force:*)",
       "Bash(op)",
       "Bash(op:*)",
       "Bash(open:*)",
-      "Bash(rm -rf: *)",
+      "Bash(rm -rf:*)",
+      "Edit(*CLAUDE.local.md)",
+      "Edit(*CLAUDE.md)",
+      "MultiEdit(*CLAUDE.local.md)",
+      "MultiEdit(*CLAUDE.md)",
+      "Read(./build/**)",
       "Read(./node_modules/**)",
-      "Read(./build/**)"
+      "Write(*CLAUDE.local.md)",
+      "Write(*CLAUDE.md)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git worktree remove --force:*)",
+      "Bash(op)",
+      "Bash(op:*)",
+      "Bash(open:*)",
+      "Bash(rm -rf:*)",
+      "Edit(*CLAUDE.local.md)",
+      "Edit(*CLAUDE.md)",
+      "MultiEdit(*CLAUDE.local.md)",
+      "MultiEdit(*CLAUDE.md)",
+      "Read(./build/**)",
+      "Read(./node_modules/**)",
+      "Write(*CLAUDE.local.md)",
+      "Write(*CLAUDE.md)"
     ]
   },
-  "model": "opus",
   "enabledMcpjsonServers": [
     "brave-search"
   ],
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh",
-    "padding": 0
-  },
   "hooks": {
     "Stop": [
       {
@@ -186,5 +194,10 @@
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 0
   }
 }
