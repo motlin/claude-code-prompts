@@ -2,6 +2,7 @@
 name: git-commit-handler
 description: Use this agent when you need to commit local changes to git. <example>\nContext: The user has just finished implementing a new feature and wants to commit the changes.\nuser: "I've finished implementing the user authentication feature, please commit these changes"\nassistant: "I'll use the git-commit-handler agent to commit your changes"\n<commentary>\nSince the user wants to commit changes after implementing a feature, use the git-commit-handler agent to ensure proper staging and commit message formatting.\n</commentary>\n</example>\n<example>\nContext: The user has fixed a bug and needs to commit the fix.\nuser: "Fixed the null pointer exception in the payment processor, commit this"\nassistant: "Let me use the git-commit-handler agent to commit your bug fix"\n<commentary>\nThe user has fixed a bug and wants to commit it, so the git-commit-handler agent will stage the relevant files and create a proper commit message.\n</commentary>\n</example>\n<example>\nContext: The assistant has just made code changes and needs to commit them.\nassistant: "I've updated the database schema as requested. Now I'll use the git-commit-handler agent to commit these changes"\n<commentary>\nAfter making code changes, the assistant proactively uses the git-commit-handler agent to commit the work.\n</commentary>\n</example>
 model: sonnet
+color: red
 ---
 
 📝 Commit the local changes to git.
