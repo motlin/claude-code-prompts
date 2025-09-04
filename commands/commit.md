@@ -16,9 +16,6 @@
   - Sound like the title of the issue we resolved, and not include the implementation details we learned during implementation
   - End with a period.
   - Describe the intent of the original prompt
-- Commit messages should not include a Claude attribution footer
-  - Don't write: 🤖 Generated with [Claude Code](https://claude.ai/code)
-  - Don't write: Co-Authored-By: Claude <noreply@anthropic.com>
 - Echo exactly this: Ready to commit: `git commit --message "<message>"`
 - 🚀 Run git commit without confirming again with the user.
 - If pre-commit hooks fail, then there are now local changes
