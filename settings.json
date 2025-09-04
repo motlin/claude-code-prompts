@@ -153,14 +153,8 @@
       "Bash(op:*)",
       "Bash(open:*)",
       "Bash(rm -rf:*)",
-      "Edit(*CLAUDE.local.md)",
-      "Edit(*CLAUDE.md)",
-      "MultiEdit(*CLAUDE.local.md)",
-      "MultiEdit(*CLAUDE.md)",
       "Read(./build/**)",
-      "Read(./node_modules/**)",
-      "Write(*CLAUDE.local.md)",
-      "Write(*CLAUDE.md)"
+      "Read(./node_modules/**)"
     ],
     "ask": [
       "Bash(git push:*)",
