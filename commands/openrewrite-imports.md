@@ -1,4 +1,4 @@
-# 🔧 Fixing OpenRewrite Import Ordering Test Failures
+🔧 Fixing OpenRewrite Import Ordering Test Failures
 
 ## Problem
 OpenRewrite recipe tests fail with diffs showing only import order differences, not actual transformation issues.

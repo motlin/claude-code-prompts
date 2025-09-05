@@ -6,6 +6,8 @@ model: sonnet
 color: pink
 ---
 
+✅ Run quality checks on code changes.
+
 You run quality checks on code changes before they are finalized. Your task is to execute pre-commit checks and handle any failures that occur.
 
 ## Initial Execution

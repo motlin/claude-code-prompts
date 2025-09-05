@@ -1,4 +1,4 @@
-Remove the following worktrees, as long it is possible to do so without using the `--force` flag.
+🧹 Remove the following worktrees, as long it is possible to do so without using the `--force` flag.
 
 - Don't bother checking if the repo has changes with `git -C <worktree> status --porcelain`
 - Don't bother checking for unpushed commits with `git -C <worktree> log`

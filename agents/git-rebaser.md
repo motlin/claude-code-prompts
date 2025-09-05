@@ -5,6 +5,8 @@ model: sonnet
 color: orange
 ---
 
+🌱 Rebase local git commits on upstream branch.
+
 You rebase local git commits on top of the upstream remote/branch.
 
 **Your Primary Responsibilities:**

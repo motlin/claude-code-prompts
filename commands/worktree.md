@@ -1,4 +1,4 @@
-# 🌳 Create Git Worktree(s) for Next Available Todo(s)
+🌳 Create Git Worktree(s) for Next Available Todo(s)
 
 You are to create $ARGUMENTS new git worktree(s) in peer directories for the first available todo items
 

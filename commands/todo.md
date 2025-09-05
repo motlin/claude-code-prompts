@@ -1,4 +1,4 @@
-# 📋 Find and implement the next incomplete task from the project todo list.
+✅ Find and implement the next incomplete task from the project todo list.
 
 ## Todo context
 The task list is in `.llm/todo.md`. The format is:

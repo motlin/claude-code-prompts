@@ -1,7 +1,4 @@
-name: todo-sweep
-description: Find all TODO comments and create background tasks for each
-
----
+🔍 Find all TODO comments and create background tasks for each
 
 Search the codebase for all TODO comments and create a task list entry for each one. Each TODO will be handled as a background task using the Task tool. The task description will include the full text of the TODO comment line found in the code.
 
