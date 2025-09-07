@@ -1,14 +1,5 @@
 ✅ Find and implement the next incomplete task from the project todo list.
 
-## Todo context
-The task list is in `.llm/todo.md`. The format is:
-
-```markdown
-- `[ ]` - Not started
-- `[x]` - Completed
-- `[>]` - In progress in a peer directory/worktree
-```
-
 ## Steps
 
 - Find the next incomplete task
@@ -18,15 +9,26 @@ The task list is in `.llm/todo.md`. The format is:
 - Implement the task
 - Think hard about the plan
 - Focus ONLY on implementing this specific task
-- Ignore all other tasks in the `.llm/todo.md` file or TODOs in the source code
+- Ignore TODOs in the source code
 - Work through the implementation methodically and completely, addressing all aspects of the task
 - Run appropriate tests and validation to ensure the implementation works
 
-- ✅ After the implementation is complete and verified
-  - Mark the task as complete:
+- When a code change is ready, and we are about to return control to the user, do these things in order:
+  - Remove obvious comments using the @comment-cleaner agent
+  - Verify the build passes using the @precommit-runner agent
+  - Commit to git using the @git-commit-handler agent
+  - Rebase on top of the upstream branch with the @git-rebaser agent
+
+- ✅ Finally mark the task as complete:
   - Run `todo-complete $(git rev-parse --show-top-level)/.llm/todo.md`
   - It marks the first incomplete task as `[x]`
 
-- Use the "precommit" agent to run precommit tests.
-- Use the "commit" agent to commit our changes.
+## Todo context
+The task list is in `.llm/todo.md`. You will not use the Read tool on this file. You'll interact with it through the `todo-get` and `todo-complete` commands. The format is:
+
+```markdown
+- `[ ]` - Not started
+- `[x]` - Completed
+- `[>]` - In progress in a peer directory/worktree
+```
 

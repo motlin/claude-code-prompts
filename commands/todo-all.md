@@ -1,29 +1,48 @@
 🔁 Process all todos automatically
 
-Continuously work through all incomplete tasks in `.llm/todo.md` until none remain.
+Repeatedly work through incomplete tasks from the project todo list.
 
-## How it works
+If the user provided additional instructions, they will appear here:
 
-This command runs a loop that:
-1. Checks if there are any incomplete tasks using `todo-get $(git rev-parse --show-toplevel)/.llm/todo.md`
-2. If a task is found, launches the `do-todo` agent to implement it
-3. Repeats until no incomplete tasks remain
+<instructions>
+$ARGUMENTS
+</instructions>
 
-## Process flow
+If the user did not provide instructions, then we are working through ALL incomplete tasks, until NONE remain.
 
-```
-while todo-get returns a task:
-    → Launch `do-todo` agent
-    → Agent implements the task
-    → Agent marks task complete
-    → Agent runs precommit tests
-    → Agent commits changes
-    → Loop continues with next task
+## Steps
+
+- Track attempt count and previously attempted tasks to prevent infinite loops
+- Find whether there is an incomplete task
+  - Run `todo-get $(git rev-parse --show-toplevel)/.llm/todo.md`
+  - It returns the first `Not started` task
+- If a task is found:
+  - Check if we've already attempted this task 2 times
+  - If yes, mark it as blocked (with `- [!]`) and continue to next task
+  - If no, launch the `do-todo` agent to implement it
+- Repeat until no incomplete tasks remain or we have met the user's instructions
+
+## Todo context
+
+The task list is in `.llm/todo.md`. You will not use the Read tool on this file. You'll interact with it through the `todo-get` and `todo-complete` commands. The format is:
+
+```markdown
+- `[ ]` - Not started
+- `[x]` - Completed
+- `[>]` - In progress in a peer directory/worktree
+- `[!]` - Blocked/Failed after multiple attempts
 ```
 
 ## Important notes
 
 - Each task is handled completely by the `do-todo` agent before moving to the next
-- The loop stops when `todo-get` returns nothing (all tasks complete)
 - Each task gets its own commit for clear history
-- Tasks marked as `[>]` (in progress elsewhere) are skipped
+
+## User feedback
+
+Throughout the process, provide clear status updates:
+- "Starting task: [task description]"
+- "Task completed successfully: [task description]"
+- "Task failed (attempt X/2): [task description]"
+- "Skipping blocked task: [task description]"
+- "All tasks completed" or "Stopping due to multiple failures"
