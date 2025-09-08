@@ -148,12 +148,7 @@
       "Bash(npm run start:*)",
 
       "Bash(git push:*)",
-      "Bash(git worktree remove --force:*)",
-      "Bash(op)",
-      "Bash(op:*)",
-      "Bash(open:*)",
       "Bash(rm -rf:*)",
-      "Read(./build/**)",
       "Read(./node_modules/**)"
     ],
     "ask": [
