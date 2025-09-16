@@ -138,6 +138,7 @@
       "Bash(git add -A:*)",
       "Bash(git add -f:*)",
       "Bash(git commit -a:*)",
+      "Bash(git reset --hard:*)",
       "Bash(npm i --global:*)",
       "Bash(npm i -g:*)",
       "Bash(npm install --global:*)",
@@ -146,10 +147,7 @@
       "Bash(npm run serve:*)",
       "Bash(npm run start &)",
       "Bash(npm run start:*)",
-
-      "Bash(git push:*)",
-      "Bash(rm -rf:*)",
-      "Read(./node_modules/**)"
+      "Bash(rm -rf:*)"
     ],
     "ask": [
       "Bash(git push:*)",
