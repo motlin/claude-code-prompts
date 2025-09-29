@@ -21,6 +21,7 @@
       "Bash(gh pr checks:*)",
       "Bash(gh pr view:*)",
       "Bash(gh repo view:*)",
+      "Bash(gh repo clone:*)",
       "Bash(git add:*)",
       "Bash(git check-ignore:*)",
       "Bash(git checkout:*)",
