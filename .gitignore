@@ -1,6 +1,7 @@
 .claude/
 .envrcshell-snapshots
 cache/
+history.jsonl
 ide
 plugins/
 powerline/
