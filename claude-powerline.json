@@ -2,44 +2,37 @@
   "theme": "custom",
   "display": {
     "style": "powerline",
+    "colorCompatibility": "auto",
     "lines": [
       {
         "segments": {
           "directory": { "enabled": true, "showBasename": true },
-          "model": { "enabled": true },
-          "session": { "enabled": true, "type": "cost", "costSource": "official", "burnType": "cost" },
-          "today": { "enabled": true, "type": "cost", "burnType": "cost" }
-        }
-      },
-      {
-        "segments": {
-          "block": { "enabled": true, "type": "weighted", "burnType": "cost" },
+          "model": { "enabled": false },
+          "session": { "enabled": false, "type": "both", "costSource": "calculated" },
+          "today": { "enabled": false, "type": "both" },
+          "block": { "enabled": false, "type": "weighted", "burnType": "tokens" },
           "version": { "enabled": true },
           "metrics": {
             "enabled": true,
-            "showResponseTime": true,
-            "showLastResponseTime": true,
+            "showResponseTime": false,
+            "showLastResponseTime": false,
             "showDuration": true,
             "showMessageCount": true,
             "showLinesAdded": true,
             "showLinesRemoved": true
           },
-          "context": { "enabled": true, "showPercentageOnly": false },
-          "tmux": { "enabled": false }
-        }
-      },
-      {
-        "segments": {
+          "context": { "enabled": true, "showPercentageOnly": true },
+          "tmux": { "enabled": false },
           "git": {
             "enabled": true,
             "showSha": true,
             "showWorkingTree": true,
             "showOperation": true,
             "showTag": true,
-            "showTimeSinceCommit": true,
-            "showStashCount": true,
-            "showUpstream": true,
-            "showRepoName": true
+            "showTimeSinceCommit": false,
+            "showStashCount": false,
+            "showUpstream": false,
+            "showRepoName": false
           }
         }
       }
@@ -62,6 +55,9 @@
   "budget": {
     "session": { "warningThreshold": 80 },
     "today": { "amount": 5.0, "warningThreshold": 80 },
-    "block": { "amount": 50, "type": "cost", "warningThreshold": 80 }
+    "block": { "amount": 20000000, "type": "tokens", "warningThreshold": 80 }
+  },
+  "modelContextLimits": {
+    "sonnet": 200000
   }
 }
