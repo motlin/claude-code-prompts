@@ -34,7 +34,3 @@
 
 @instructions/tool-use.md
 
-## 📋 Taskwarrior
-
-@instructions/taskwarrior.md
-
