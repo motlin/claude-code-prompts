@@ -188,5 +188,5 @@
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
   },
-  "alwaysThinkingEnabled": false
+  "alwaysThinkingEnabled": true
 }
