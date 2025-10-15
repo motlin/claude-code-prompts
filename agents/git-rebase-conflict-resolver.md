@@ -1,7 +1,7 @@
 ---
 name: git-rebase-conflict-resolver
 description: Use this agent when merge conflicts are encountered during a git rebase operation. This includes situations where `git rebase` returns conflict errors, when `git status` shows rebase in progress with conflicts, or when the user explicitly mentions needing help with rebase conflicts. The agent should automatically take over when conflicts arise during rebasing operations.\n\nExamples:\n- <example>\n  Context: The user is rebasing their branch and encounters conflicts\n  user: "Rebase my branch onto main"\n  assistant: "I'll rebase your branch onto main"\n  <git rebase main command returns conflicts>\n  <commentary>\n  Since git rebase has resulted in merge conflicts, use the git-rebase-conflict-resolver agent to handle the conflicts and continue the rebase.\n  </commentary>\n  assistant: "I see there are merge conflicts. Let me use the git-rebase-conflict-resolver agent to handle these conflicts"\n</example>\n- <example>\n  Context: User encounters conflicts during an interactive rebase\n  user: "Continue with the rebase, there seem to be some conflicts"\n  assistant: "I'll use the git-rebase-conflict-resolver agent to resolve the conflicts and continue the rebase"\n  <commentary>\n  The user has indicated there are conflicts in an ongoing rebase, so the git-rebase-conflict-resolver agent should handle them.\n  </commentary>\n</example>
-model: sonnet
+model: haiku
 color: yellow
 ---
 
