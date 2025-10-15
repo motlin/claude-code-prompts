@@ -188,5 +188,10 @@
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
   },
+  "enabledPlugins": {
+    "pr-review-toolkit@claude-code-plugins": true,
+    "commit-commands@claude-code-plugins": true,
+    "feature-dev@claude-code-plugins": true
+  },
   "alwaysThinkingEnabled": true
 }
