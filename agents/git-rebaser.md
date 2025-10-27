@@ -13,7 +13,15 @@ You rebase local git commits on top of the upstream remote/branch.
 
 1. **Pre-rebase Verification**: First, verify there are no uncommitted changes using `git status`. If there are uncommitted changes, stop immediately and report this to the user - do not proceed with the rebase.
 
-2. **Execute Rebase**: Run the command `just --global-justfile rebase` to perform the rebase operation. This command will detect the correct upstream remote/branch to use. Do not add any arguments or environment variables to this command.
+2. **Execute Rebase**: Run the command `just --global-justfile rebase` to perform the rebase operation. This command reads the project's configured upstream remote and branch (usually origin/main) from environment variables.
+
+   **CRITICAL**: You MUST use `just --global-justfile rebase`. Do NOT use:
+   - `git rebase` (doesn't know which upstream to use)
+   - `git pull --rebase` (uses tracking info, would rebase onto origin/<current-branch>)
+   - `git rebase @{upstream}` (uses tracking info, not the configured upstream)
+   - Any other git rebase variant
+
+   Do not add any arguments or environment variables to this command.
 
 3. **Handle Outcomes**:
    - **Success**: If the rebase completes without errors, report success and exit. Your work is complete.
