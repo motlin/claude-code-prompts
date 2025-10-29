@@ -1,3 +1,8 @@
+---
+allowed-tools: Read, Edit
+description: Fix OpenRewrite import ordering test failures
+---
+
 🔧 Fixing OpenRewrite Import Ordering Test Failures
 
 ## Problem

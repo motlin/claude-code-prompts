@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*), Bash(just:*)
+description: Split local changes into multiple logical commits
+---
+
 📝 Commit the local changes to git. Analyze my local changes and propose splitting them into multiple logical commits.
 
 - 📦 Stage files or parts of files individually

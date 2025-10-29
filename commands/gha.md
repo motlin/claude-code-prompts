@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*), Bash(gh:*), Bash(just:*), Read, Edit
+description: Fix failing GitHub Actions for the current commit
+---
+
 🔧 Fix failing GitHub Actions for the current commit.
 
 - 🔄 Run `git fetch` to get the latest refs from origin

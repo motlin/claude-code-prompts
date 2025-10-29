@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*), Bash(just:*)
+description: Commit the local changes to git
+---
+
 📝 Commit the local changes to git.
 
 - 🔧 Run `just precommit` (if a `justfile` exists and contains a `precommit` recipe)

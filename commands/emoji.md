@@ -1,3 +1,8 @@
+---
+allowed-tools: Read, Edit, Glob
+description: Add appropriate emoji to make content more engaging
+---
+
 😊 Add appropriate emoji to the content we're working on to make it more engaging and easier to scan.
 
 $ARGUMENTS

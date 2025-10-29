@@ -1,3 +1,8 @@
+---
+allowed-tools: Read, Edit, Glob
+description: Shorten justfile recipe doc comments for simple recipes
+---
+
 For very short justfile recipes, change the doc comment string to be the entire command. Before:
 
 ```justfile

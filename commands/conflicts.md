@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*), Bash(just:*), Read, Edit
+description: Fix all merge conflicts and continue the git rebase
+---
+
 🔀 Fix all merge conflicts and continue the git rebase.
 
 - Check `git status` to understand the state of the rebase and identify conflicted files

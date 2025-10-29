@@ -1,3 +1,8 @@
+---
+allowed-tools: Edit(CLAUDE.local.md), Write(CLAUDE.local.md)
+description: Document tricky problems in CLAUDE.local.md
+---
+
 📚 Document tricky problems in CLAUDE.local.md
 
 $ARGUMENTS

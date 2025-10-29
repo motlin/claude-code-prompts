@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*)
+description: Remove git worktrees safely
+---
+
 🧹 Remove the following worktrees, as long it is possible to do so without using the `--force` flag.
 
 - Don't bother checking if the repo has changes with `git -C <worktree> status --porcelain`

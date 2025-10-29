@@ -1,3 +1,8 @@
+---
+allowed-tools: Task, Bash(just:*)
+description: Rebase all branches onto a configurable upstream branch
+---
+
 🔄 Keep all branches in a repository up-to-date by rebasing them onto a configurable upstream branch.
 
 Initial Rebase Attempt: Run `just --global-justfile git-all` to attempt rebasing all branches.
