@@ -16,6 +16,7 @@
       "WebSearch",
       "Write",
       "Skill(markdown-tasks:markdown-tasks)",
+      "WebFetch(domain:api.pushover.net)",
       "WebFetch(domain:developer.1password.com)",
       "WebFetch(domain:developers.cloudflare.com)",
       "WebFetch(domain:docs.github.com)",
@@ -32,7 +33,13 @@
       "mcp__sentry__find_issues",
       "mcp__sentry__find_projects",
       "mcp__sentry__get_issue_details",
+      "mcp__serena__find_file",
+      "mcp__serena__list_dir",
       "mcp__serena__find_symbol",
+      "mcp__serena__get_symbols_overview",
+      "mcp__serena__initial_instructions",
+      "mcp__serena__insert_after_symbol",
+      "mcp__serena__list_dir",
       "mcp__serena__replace_symbol_body",
       "mcp__serena__search_for_pattern"
     ],
@@ -42,8 +49,9 @@
       "Bash(git add -A:*)",
       "Bash(git add -f:*)",
       "Bash(git commit -a:*)",
-      "Bash(git reset --hard:*)",
       "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git worktree remove --force:*)",
       "Bash(npm i --global:*)",
       "Bash(npm i -g:*)",
       "Bash(npm install --global:*)",
@@ -52,23 +60,19 @@
       "Bash(npm run serve:*)",
       "Bash(npm run start &)",
       "Bash(npm run start:*)",
-      "Bash(rm -rf:*)"
-    ],
-    "ask": [
-      "Bash(git push:*)",
-      "Bash(git worktree remove --force:*)",
       "Bash(op)",
       "Bash(op:*)",
-      "Bash(open:*)",
       "Bash(rm -rf:*)",
-      "Edit(*CLAUDE.local.md)",
-      "Edit(*CLAUDE.md)",
-      "MultiEdit(*CLAUDE.local.md)",
-      "MultiEdit(*CLAUDE.md)",
+      "Edit(CLAUDE.md)",
+      "Edit(~/.claude/settings.json)",
+      "MultiEdit(CLAUDE.md)",
+      "MultiEdit(~/.claude/settings.json)",
       "Read(./build/**)",
       "Read(./node_modules/**)",
-      "Write(*CLAUDE.local.md)",
-      "Write(*CLAUDE.md)"
+      "Write(CLAUDE.md)"
+    ],
+    "ask": [
+      "Bash(open:*)"
     ]
   },
   "enabledMcpjsonServers": [
@@ -100,5 +104,8 @@
     "agent-sdk-dev@claude-code-plugins": true,
     "example-skills@anthropic-agent-skills": true
   },
-  "alwaysThinkingEnabled": false
+  "sandbox": {
+    "autoAllowBashIfSandboxed": true,
+    "enabled": true
+  }
 }
