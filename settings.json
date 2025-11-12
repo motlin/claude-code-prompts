@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "cleanupPeriodDays": 99999,
   "env": {
     "DISABLE_BUG_COMMAND": "1",
     "DISABLE_ERROR_REPORTING": "1",
@@ -16,6 +17,7 @@
       "WebSearch",
       "Write",
       "Skill(markdown-tasks:markdown-tasks)",
+      "SlashCommand(/commit)",
       "WebFetch(domain:api.pushover.net)",
       "WebFetch(domain:developer.1password.com)",
       "WebFetch(domain:developers.cloudflare.com)",
@@ -26,20 +28,26 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:javadoc.io)",
       "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:registry.npmjs.org)",
       "WebFetch(domain:repo1.maven.org)",
       "WebFetch(domain:tanstack.com)",
       "WebFetch(domain:taskwarrior.org)",
       "WebFetch(domain:vite.dev)",
+      "WebFetch(domain:www.npmjs.com)",
+      "mcp__context7__get-library-docs",
+      "mcp__context7__resolve-library-id",
       "mcp__sentry__find_issues",
       "mcp__sentry__find_projects",
       "mcp__sentry__get_issue_details",
+      "mcp__serena__check_onboarding_performed",
       "mcp__serena__find_file",
-      "mcp__serena__list_dir",
+      "mcp__serena__find_referencing_symbols",
       "mcp__serena__find_symbol",
       "mcp__serena__get_symbols_overview",
       "mcp__serena__initial_instructions",
       "mcp__serena__insert_after_symbol",
       "mcp__serena__list_dir",
+      "mcp__serena__list_memories",
       "mcp__serena__replace_symbol_body",
       "mcp__serena__search_for_pattern"
     ],
@@ -67,8 +75,6 @@
       "Edit(~/.claude/settings.json)",
       "MultiEdit(CLAUDE.md)",
       "MultiEdit(~/.claude/settings.json)",
-      "Read(./build/**)",
-      "Read(./node_modules/**)",
       "Write(CLAUDE.md)"
     ],
     "ask": [
@@ -107,5 +113,6 @@
   "sandbox": {
     "autoAllowBashIfSandboxed": true,
     "enabled": true
-  }
+  },
+  "alwaysThinkingEnabled": true
 }
