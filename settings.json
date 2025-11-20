@@ -14,10 +14,12 @@
       "Edit",
       "MultiEdit",
       "Read",
+      "Search",
       "WebSearch",
       "Write",
-      "Skill(markdown-tasks:markdown-tasks)",
+      "Skill(markdown-tasks:tasks)",
       "SlashCommand(/commit)",
+      "SlashCommand(/conflicts)",
       "WebFetch(domain:api.pushover.net)",
       "WebFetch(domain:developer.1password.com)",
       "WebFetch(domain:developers.cloudflare.com)",
@@ -27,6 +29,8 @@
       "WebFetch(domain:docusaurus.io)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:javadoc.io)",
+      "WebFetch(domain:oclif.io)",
+      "WebFetch(domain:orm.drizzle.team)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:registry.npmjs.org)",
       "WebFetch(domain:repo1.maven.org)",
@@ -104,15 +108,25 @@
   },
   "enabledPlugins": {
     "pr-review-toolkit@claude-code-plugins": true,
-    "commit-commands@claude-code-plugins": true,
     "feature-dev@claude-code-plugins": true,
-    "markdown-tasks@motlin-claude-code-plugins": true,
     "agent-sdk-dev@claude-code-plugins": true,
-    "example-skills@anthropic-agent-skills": true
+    "example-skills@anthropic-agent-skills": true,
+    "markdown-tasks@motlin-claude-code-plugins": true,
+    "git-worktree@motlin-claude-code-plugins": true,
+    "iterm2-titles@motlin-claude-code-plugins": true,
+    "tmux-titles@motlin-claude-code-plugins": true,
+    "commit-commands@claude-code-plugins": true,
+    "build-automation@motlin-claude-code-plugins": true,
+    "code-quality@motlin-claude-code-plugins": true,
+    "git-workflow@motlin-claude-code-plugins": true,
+    "java-maven@motlin-claude-code-plugins": true,
+    "justfile-utils@motlin-claude-code-plugins": true,
+    "git@motlin-claude-code-plugins": true,
+    "justfile@motlin-claude-code-plugins": true
   },
   "sandbox": {
-    "autoAllowBashIfSandboxed": true,
-    "enabled": true
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
   },
   "alwaysThinkingEnabled": true
 }
