@@ -122,7 +122,10 @@
     "java-maven@motlin-claude-code-plugins": true,
     "justfile-utils@motlin-claude-code-plugins": true,
     "git@motlin-claude-code-plugins": true,
-    "justfile@motlin-claude-code-plugins": true
+    "justfile@motlin-claude-code-plugins": true,
+    "build@motlin-claude-code-plugins": true,
+    "code@motlin-claude-code-plugins": true,
+    "java@motlin-claude-code-plugins": true
   },
   "sandbox": {
     "enabled": true,
