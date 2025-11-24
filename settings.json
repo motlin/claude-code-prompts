@@ -18,6 +18,7 @@
       "WebSearch",
       "Write",
       "Skill(markdown-tasks:tasks)",
+      "Skill(orchestration:orchestration)",
       "SlashCommand(/commit)",
       "SlashCommand(/conflicts)",
       "WebFetch(domain:api.pushover.net)",
@@ -34,6 +35,7 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:registry.npmjs.org)",
       "WebFetch(domain:repo1.maven.org)",
+      "WebFetch(domain:stackoverflow.com)",
       "WebFetch(domain:tanstack.com)",
       "WebFetch(domain:taskwarrior.org)",
       "WebFetch(domain:vite.dev)",
@@ -125,11 +127,13 @@
     "justfile@motlin-claude-code-plugins": true,
     "build@motlin-claude-code-plugins": true,
     "code@motlin-claude-code-plugins": true,
-    "java@motlin-claude-code-plugins": true
+    "java@motlin-claude-code-plugins": true,
+    "orchestration@motlin-claude-code-plugins": true,
+    "github@motlin-claude-code-plugins": true
   },
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": false
 }
