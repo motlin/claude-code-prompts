@@ -20,13 +20,16 @@
       "Skill(build:precommit)",
       "Skill(code:cli)",
       "Skill(code:code-quality)",
+      "Skill(code:testing)",
       "Skill(git:git-workflow)",
+      "Skill(java:pom-ordering)",
       "Skill(justfile:justfile-style)",
       "Skill(markdown-tasks:tasks)",
       "Skill(orchestration:conversation-style)",
       "Skill(orchestration:orchestration)",
+      "Skill(orchestration:llm-context)",
       "SlashCommand(/build:fix)",
-      "SlashCommand(/commit-chunks)",
+      "SlashCommand(/git:commit-chunks)",
       "SlashCommand(/git:commit)",
       "SlashCommand(/git:conflicts)",
       "SlashCommand(/git:rebase-all)",
@@ -52,6 +55,7 @@
       "WebFetch(domain:oclif.io)",
       "WebFetch(domain:orm.drizzle.team)",
       "WebFetch(domain:platform.claude.com)",
+      "WebFetch(domain:prettier.io)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:registry.npmjs.org)",
       "WebFetch(domain:repo1.maven.org)",
@@ -111,6 +115,7 @@
       "Bash(open:*)"
     ]
   },
+  "model": "opus",
   "enabledMcpjsonServers": [
     "brave-search"
   ],
@@ -143,15 +148,17 @@
     "justfile@motlin-claude-code-plugins": true,
     "orchestration@motlin-claude-code-plugins": true,
     "tmux-titles@motlin-claude-code-plugins": true,
-    "pr-review-toolkit@claude-code-plugins": true,
-    "commit-commands@claude-code-plugins": true,
-    "feature-dev@claude-code-plugins": true,
+    "pr-review-toolkit@claude-code-plugins": false,
+    "commit-commands@claude-code-plugins": false,
+    "feature-dev@claude-code-plugins": false,
     "agent-sdk-dev@claude-code-plugins": true,
-    "example-skills@anthropic-agent-skills": true
+    "example-skills@anthropic-agent-skills": true,
+    "offline-claude-code-guide@motlin-claude-code-plugins": true
   },
   "sandbox": {
     "enabled": false,
-    "autoAllowBashIfSandboxed": false
+    "autoAllowBashIfSandboxed": true
   },
+  "spinnerTipsEnabled": false,
   "alwaysThinkingEnabled": true
 }

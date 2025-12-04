@@ -1,13 +1,10 @@
-.claude/
-.envrcshell-snapshots
-cache/
+debug/
+file-history/
 history.jsonl
 ide
+plans
 plugins/
-powerline/
 projects/
 shell-snapshots
 statsig/
 todos/
-debug/
-file-history/
