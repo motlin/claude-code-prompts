@@ -145,9 +145,6 @@
       "Bash(git add -A:*)",
       "Bash(git add -f:*)",
       "Bash(git commit -a:*)",
-      "Bash(git push:*)",
-      "Bash(git reset --hard:*)",
-      "Bash(git worktree remove --force:*)",
       "Bash(npm i --global:*)",
       "Bash(npm i -g:*)",
       "Bash(npm install --global:*)",
@@ -155,7 +152,17 @@
       "Bash(npm run dev:*)",
       "Bash(npm run serve:*)",
       "Bash(npm run start &)",
-      "Bash(npm run start:*)",
+      "Bash(npm run start:*)"
+    ],
+    "ask": [
+      "Edit(CLAUDE.md)",
+      "Edit(~/.claude/settings.json)",
+      "MultiEdit(CLAUDE.md)",
+      "MultiEdit(~/.claude/settings.json)",
+      "Write(CLAUDE.md)",
+      "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git worktree remove --force:*)",
       "Bash(op)",
       "Bash(op:*)",
       "Bash(open:*)",
@@ -163,13 +170,6 @@
       "Bash(rm -fr:*)",
       "Bash(rm -r -f:*)",
       "Bash(rm -f -r:*)"
-    ],
-    "ask": [
-      "Edit(CLAUDE.md)",
-      "Edit(~/.claude/settings.json)",
-      "MultiEdit(CLAUDE.md)",
-      "MultiEdit(~/.claude/settings.json)",
-      "Write(CLAUDE.md)"
     ],
     "defaultMode": "acceptEdits"
   },
