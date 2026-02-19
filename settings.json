@@ -211,51 +211,21 @@
     "padding": 0
   },
   "enabledPlugins": {
-    "markdown-tasks@motlin-claude-code-plugins": true,
     "build@motlin-claude-code-plugins": true,
+    "builtin-tasks@motlin-claude-code-plugins": true,
     "code@motlin-claude-code-plugins": true,
     "git@motlin-claude-code-plugins": true,
     "github@motlin-claude-code-plugins": true,
     "iterm2-titles@motlin-claude-code-plugins": true,
     "java@motlin-claude-code-plugins": true,
     "justfile@motlin-claude-code-plugins": true,
+    "markdown-tasks@motlin-claude-code-plugins": true,
     "offline-claude-code-guide@motlin-claude-code-plugins": true,
     "orchestration@motlin-claude-code-plugins": true,
-    "tmux-titles@motlin-claude-code-plugins": true,
-    "agent-sdk-dev@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true,
-    "firebase@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
-    "hookify@claude-plugins-official": true,
-    "learning-output-style@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "plugin-dev@claude-plugins-official": true,
-    "sentry@claude-plugins-official": true,
-    "serena@claude-plugins-official": true,
-    "supabase@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "pushover@motlin-claude-code-plugins": true
+    "pushover@motlin-claude-code-plugins": true,
+    "tmux-titles@motlin-claude-code-plugins": true
   },
-  "sandbox": {
-    "enabled": false,
-    "autoAllowBashIfSandboxed": true
-  },
-  "spinnerTipsEnabled": false,
-  "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Giving you up",
-      "Letting you down",
-      "Running around",
-      "Deserting you",
-      "Making you cry",
-      "Saying goodbye",
-      "Telling a lie",
-      "Hurting you"
-    ]
-  }
+  "skipDangerousModePermissionPrompt": true,
+  "teammateMode": "tmux"
 }
