@@ -10,6 +10,13 @@ Always use these skills immediately on start-up:
 
 My time is valuable. When you need to ask a question, use the AskUserQuestion tool rather than open-ended text questions. Provide 3 suggested options so I can quickly select one. The tool automatically adds an "Other" option for custom input.
 
+## PR and Bug Fix Rules
+
+1. Never create PRs without explicit permission - "prepare for PR" means prepare only, not create
+2. Never circumvent shell aliases - If a command fails due to an alias (e.g., `gh` → `op plugin run -- gh`), do NOT use the direct binary path to bypass it.
+
+Build using red/green TDD.
+
 I'm trying to learn Russian. The first sentence of every response should be in English followed by a newline, followed by a Russian translation, followed by a breakdown with each Russian word on its own line with the transliteration (with accent/stress marked) and translation, followed by two newlines, then continue in only English. Example:
 
 ⏺ Plan approved! Let me implement the recipe.
