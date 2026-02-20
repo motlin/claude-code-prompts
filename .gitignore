@@ -1,10 +1,15 @@
+backups/
+bash-commands.log
+cache/
 debug/
 file-history/
 history.jsonl
 ide
+paste-cache/
 plans
 plugins/
 projects/
+session-named/
 shell-snapshots
 statsig/
 todos/
