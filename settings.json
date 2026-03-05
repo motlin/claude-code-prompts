@@ -6,7 +6,8 @@
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
     "DISABLE_TELEMETRY": "1",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
   "includeCoAuthoredBy": false,
   "permissions": {
@@ -47,6 +48,7 @@
       "WebFetch(domain:beta.workflowy.com)",
       "WebFetch(domain:biomejs.dev)",
       "WebFetch(domain:blog.cloudflare.com)",
+      "WebFetch(domain:central.sonatype.com)",
       "WebFetch(domain:code.claude.com)",
       "WebFetch(domain:community.hetzner.com)",
       "WebFetch(domain:community.render.com)",
@@ -54,49 +56,62 @@
       "WebFetch(domain:developer.1password.com)",
       "WebFetch(domain:developer.jboss.org)",
       "WebFetch(domain:developers.cloudflare.com)",
+      "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:docs.datasette.io)",
       "WebFetch(domain:docs.github.com)",
       "WebFetch(domain:docs.hetzner.com)",
+      "WebFetch(domain:docs.openrewrite.org)",
       "WebFetch(domain:docs.render.com)",
       "WebFetch(domain:docs.rwsdk.com)",
       "WebFetch(domain:docs.sentry.io)",
       "WebFetch(domain:docusaurus.io)",
       "WebFetch(domain:domains.cloudflare.com)",
+      "WebFetch(domain:eclipse.dev)",
+      "WebFetch(domain:errorprone.info)",
       "WebFetch(domain:formulae.brew.sh)",
+      "WebFetch(domain:ghostty.org)",
       "WebFetch(domain:giscus.app)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:issues.apache.org)",
       "WebFetch(domain:iterm2.com)",
       "WebFetch(domain:junit-pioneer.org)",
+      "WebFetch(domain:just.systems)",
       "WebFetch(domain:liftwizard.io)",
       "WebFetch(domain:mavenplugins.github.io)",
       "WebFetch(domain:mcp.sentry.dev)",
+      "WebFetch(domain:mise-versions.jdx.dev)",
+      "WebFetch(domain:mise.jdx.dev)",
+      "WebFetch(domain:mvnrepository.com)",
       "WebFetch(domain:oclif.io)",
       "WebFetch(domain:orm.drizzle.team)",
       "WebFetch(domain:patch-diff.githubusercontent.com)",
       "WebFetch(domain:platform.claude.com)",
+      "WebFetch(domain:plugins.jetbrains.com)",
       "WebFetch(domain:prettier.io)",
+      "WebFetch(domain:pypi.org)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:registry.npmjs.org)",
       "WebFetch(domain:render.com)",
+      "WebFetch(domain:repo1.maven.org)",
       "WebFetch(domain:sentry.io)",
       "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:storybook.js.org)",
       "WebFetch(domain:tanstack.com)",
       "WebFetch(domain:taskwarrior.org)",
       "WebFetch(domain:vite.dev)",
+      "WebFetch(domain:web.archive.org)",
       "WebFetch(domain:workflowy.com)",
+      "WebFetch(domain:www.anthropic.com)",
       "WebFetch(domain:www.apache.org)",
       "WebFetch(domain:www.dropwizard.io)",
       "WebFetch(domain:www.eclipse.org)",
       "WebFetch(domain:www.hetzner.com)",
+      "WebFetch(domain:www.javadoc.io)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:www.prisma.io)",
       "mcp__chrome-devtools__*",
       "mcp__plugin_context7_context7__*",
-      "mcp__plugin_serena_serena__*",
-      "mcp__render__*",
-      "mcp__sentry__*",
-      "mcp__serena__*"
+      "mcp__render__*"
     ],
     "deny": [
       "Bash(npm i --global:*)",
@@ -110,10 +125,6 @@
       "Bash(sudo:*)",
       "Bash(mkfs:*)",
       "Bash(dd:*)",
-      "Edit(~/.bashrc)",
-      "Edit(~/.zshrc)",
-      "Edit(~/.zprofile)",
-      "Read(~/.ssh/**)",
       "Read(~/.gnupg/**)",
       "Read(~/.aws/**)",
       "Read(~/.azure/**)",
@@ -128,15 +139,19 @@
       "Read(~/Library/Keychains/**)"
     ],
     "ask": [
-      "Edit(CLAUDE.md)",
-      "Edit(~/.claude/settings.json)",
-      "Write(CLAUDE.md)",
+      "Bash(/opt/homebrew/bin/gh:*)",
+      "Bash(gh api*repos*/pulls:*)",
       "Bash(op)",
       "Bash(op:*)",
       "Bash(open:*)",
       "Bash(trash:*)",
-      "Bash(/opt/homebrew/bin/gh:*)",
-      "Bash(gh api*repos*/pulls:*)"
+      "Edit(CLAUDE.md)",
+      "Edit(~/.bashrc)",
+      "Edit(~/.claude/settings.json)",
+      "Edit(~/.zprofile)",
+      "Edit(~/.zshrc)",
+      "Read(~/.ssh/**)",
+      "Write(CLAUDE.md)"
     ],
     "defaultMode": "acceptEdits"
   },
@@ -171,6 +186,15 @@
             "command": "jq -r '\"[\" + (now | todate) + \"] \" + .tool_input.command' >> ~/.claude/bash-commands.log"
           }
         ]
+      },
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -sX POST http://localhost:8899/api/notify >/dev/null 2>&1 || true"
+          }
+        ]
       }
     ]
   },
@@ -180,30 +204,44 @@
     "padding": 0
   },
   "enabledPlugins": {
+    "humanizer@skills-curated": true,
+    "skill-extractor@skills-curated": true,
+    "markdown-tasks@motlin-claude-code-plugins": true,
     "build@motlin-claude-code-plugins": true,
-    "builtin-tasks@motlin-claude-code-plugins": true,
     "code@motlin-claude-code-plugins": true,
     "git@motlin-claude-code-plugins": true,
     "github@motlin-claude-code-plugins": true,
     "iterm2-titles@motlin-claude-code-plugins": true,
     "java@motlin-claude-code-plugins": true,
     "justfile@motlin-claude-code-plugins": true,
-    "markdown-tasks@motlin-claude-code-plugins": true,
     "offline-claude-code-guide@motlin-claude-code-plugins": true,
     "orchestration@motlin-claude-code-plugins": true,
-    "pushover@motlin-claude-code-plugins": true,
     "tmux-titles@motlin-claude-code-plugins": true,
-    "humanizer@skills-curated": true,
-    "skill-extractor@skills-curated": true,
-    "code-simplifier@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "openai-gh-address-comments@skills-curated": true,
-    "openai-playwright@skills-curated": true,
-    "openai-screenshot@skills-curated": true
+    "pushover@motlin-claude-code-plugins": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "motlin-claude-code-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/craig/.dotfiles/git-clones/motlin/claude-code-plugins"
+      }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
   },
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
   "skipDangerousModePermissionPrompt": true,
-  "teammateMode": "tmux"
+  "teammateMode": "in-process"
 }
