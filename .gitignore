@@ -13,3 +13,7 @@ session-named/
 shell-snapshots
 statsig/
 todos/
+.credentials.json
+session-env/
+tasks/
+teams/
