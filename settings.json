@@ -44,6 +44,7 @@
       "Skill(plugin-dev:agent-development)",
       "Skill(plugin-dev:plugin-structure)",
       "Skill(plugin-dev:skill-development)",
+      "Skill(humanizer)",
       "WebFetch(domain:adoptium.net)",
       "WebFetch(domain:api.anthropic.com)",
       "WebFetch(domain:api.github.com)",
@@ -209,11 +210,15 @@
     "skill-extractor@skills-curated": true,
     "agent-sdk-dev@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "hookify@claude-plugins-official": true,
+    "learning-output-style@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
     "plugin-dev@claude-plugins-official": true,
+    "telegram@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
     "build@motlin-claude-code-plugins": true,
     "builtin-tasks@motlin-claude-code-plugins": true,
     "code@motlin-claude-code-plugins": true,
@@ -228,8 +233,7 @@
     "orchestration@motlin-claude-code-plugins": true,
     "pushover@motlin-claude-code-plugins": true,
     "tmux-titles@motlin-claude-code-plugins": true,
-    "worktree-setup@motlin-claude-code-plugins": true,
-    "telegram@claude-plugins-official": true
+    "worktree-setup@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -247,6 +251,7 @@
   },
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
+  "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "teammateMode": "in-process"
 }

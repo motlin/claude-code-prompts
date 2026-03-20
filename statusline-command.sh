@@ -17,4 +17,11 @@ if [[ -n "$CWD" && -f "$CWD/.llm/todo.md" ]]; then
     fi
 fi
 
-echo -e "$PART1$TASK_COUNT\n$PART2"
+# Rate limits (5-hour and 7-day windows)
+FIVE=$(echo "$INPUT" | jq -r '.rate_limits.five_hour.used_percentage // empty')
+WEEK=$(echo "$INPUT" | jq -r '.rate_limits.seven_day.used_percentage // empty')
+RATE=""
+[[ -n "$FIVE" ]] && RATE=" ⏱ 5h:$(printf '%.0f' "$FIVE")%"
+[[ -n "$WEEK" ]] && RATE="${RATE} 7d:$(printf '%.0f' "$WEEK")%"
+
+echo -e "$PART1$TASK_COUNT\n$PART2$RATE"
