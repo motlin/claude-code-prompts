@@ -40,6 +40,9 @@
       "Bash(sqlite3:*)",
       "Bash(wrangler:*)",
       "Skill(example-skills:*)",
+      "Skill(humanizer)",
+      "Skill(plugin-dev:agent-development)",
+      "Skill(plugin-dev:plugin-structure)",
       "Skill(plugin-dev:skill-development)",
       "WebFetch(domain:adoptium.net)",
       "WebFetch(domain:api.anthropic.com)",
@@ -111,6 +114,8 @@
       "WebFetch(domain:www.prisma.io)",
       "mcp__chrome-devtools__*",
       "mcp__plugin_context7_context7__*",
+      "mcp__plugin_github_github__*",
+      "mcp__plugin_playwright_playwright__*",
       "mcp__render__*"
     ],
     "deny": [
