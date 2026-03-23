@@ -17,3 +17,8 @@ todos/
 session-env/
 tasks/
 teams/
+chrome/
+memory/
+mcp-needs-auth-cache.json
+mcp.json
+sessions/
