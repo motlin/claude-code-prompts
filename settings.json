@@ -223,7 +223,8 @@
     "orchestration@motlin-claude-code-plugins": true,
     "pushover@motlin-claude-code-plugins": true,
     "tmux-titles@motlin-claude-code-plugins": true,
-    "worktree-setup@motlin-claude-code-plugins": true
+    "worktree-setup@motlin-claude-code-plugins": true,
+    "telegram@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
