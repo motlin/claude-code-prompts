@@ -22,3 +22,5 @@ memory/
 mcp-needs-auth-cache.json
 mcp.json
 sessions/
+image-cache/
+channels/
