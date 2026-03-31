@@ -4,7 +4,6 @@ Always use these skills immediately on start-up:
 - @orchestration:llm-context
 - @code:cli
 - @code:code-quality
-- @code:testing
 - @git:git-workflow
 - @build:precommit
 
