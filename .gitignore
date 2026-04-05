@@ -24,3 +24,4 @@ mcp.json
 sessions/
 image-cache/
 channels/
+.llm/
