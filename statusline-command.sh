@@ -3,6 +3,14 @@
 # Read JSON input from stdin
 INPUT=$(cat)
 
+# Cache the raw JSON for the web dashboard
+SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // empty')
+if [[ -n "$SESSION_ID" ]]; then
+    CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/claude-code-plans/statusline"
+    mkdir -p "$CACHE_DIR"
+    echo "$INPUT" >"$CACHE_DIR/$SESSION_ID.json"
+fi
+
 PART1=$(echo "$INPUT" | npx -y @owloops/claude-powerline@1.20.1 --theme=tokyo-night --style=capsule)
 # Strip context_window to force transcript-based calculation (workaround for anthropics/claude-code#13783)
 PART2=$(echo "$INPUT" | jq 'del(.context_window)' | npx -y ccusage@18.0.10 statusline --visual-burn-rate emoji)
