@@ -221,6 +221,9 @@ def render_plan(filename):
     title_match = re.search(r"^#\s+(.+)", md, re.MULTILINE)
     title = html.escape(title_match.group(1)) if title_match else path.stem
 
+    mtime = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
+    date_str = mtime.strftime("%b %d, %Y %H:%M UTC")
+
     body = md_to_html(md)
 
     return f"""<!DOCTYPE html>
@@ -233,6 +236,7 @@ def render_plan(filename):
 </head>
 <body>
 <a class="back" href="/">&larr; All Plans</a>
+<p style="color: #656d76; font-size: 0.85em; margin-bottom: 1.5em;">Last modified: {date_str}</p>
 {body}
 </body>
 </html>"""
