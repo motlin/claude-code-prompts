@@ -220,6 +220,7 @@
     "skill-extractor@skills-curated": true,
     "claude-reflect@claude-reflect-marketplace": true,
     "build@motlin-claude-code-plugins": true,
+    "claude-code-plans@motlin-claude-code-plugins": true,
     "builtin-tasks@motlin-claude-code-plugins": true,
     "code@motlin-claude-code-plugins": true,
     "ghostty-titles@motlin-claude-code-plugins": true,
