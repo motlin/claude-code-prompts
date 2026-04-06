@@ -160,36 +160,6 @@
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
   "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"SessionStart\" | .cwd = $ENV.PWD // \"\" | .model = ($ENV.CLAUDE_MODEL // \"\")')\" >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"SessionEnd\"')\" >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"Stop\"')\" >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ],
     "PostToolUse": [
       {
         "matcher": "Bash",
@@ -197,43 +167,6 @@
           {
             "type": "command",
             "command": "jq -r '\"[\" + (now | todate) + \"] \" + .tool_input.command' >> ~/.claude/bash-commands.log"
-          }
-        ]
-      },
-      {
-        "matcher": "ExitPlanMode",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/notify >/dev/null 2>&1 || true"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"PostToolUse\" | .tool_name = ($ENV.CLAUDE_TOOL_NAME // \"\")')\" >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ],
-    "TaskCompleted": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"TaskCompleted\" | .task_id = ($ENV.CLAUDE_TASK_ID // \"\") | .task_subject = ($ENV.CLAUDE_TASK_SUBJECT // \"\")')\" >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ],
-    "WorktreeCreate": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "curl -sX POST http://localhost:8899/api/hook -H 'Content-Type: application/json' -d \"$(echo '{}' | jq -c '.session_id = $ENV.CLAUDE_SESSION_ID // \"\" | .hook_event_name = \"WorktreeCreate\" | .name = ($ENV.CLAUDE_WORKTREE_NAME // \"\")')\" >/dev/null 2>&1 || true"
           }
         ]
       }
