@@ -122,6 +122,8 @@
       "mcp__render__*"
     ],
     "deny": [
+      "Bash(git add -A:*)",
+      "Bash(git add --all:*)",
       "Bash(npm i --global:*)",
       "Bash(npm i -g:*)",
       "Bash(npm install --global:*)",
@@ -148,7 +150,10 @@
       "Bash(op)",
       "Bash(op:*)",
       "Bash(open:*)",
-      "Bash(trash:*)",
+      "Bash(sudo:*)",
+      "Bash(trash -fr:*)",
+      "Bash(trash -r:*)",
+      "Bash(trash -rf:*)",
       "Edit(CLAUDE.md)",
       "Edit(~/.bashrc)",
       "Edit(~/.claude/settings.json)",
