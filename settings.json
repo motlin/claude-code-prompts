@@ -274,6 +274,7 @@
   },
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "voiceEnabled": true,
   "teammateMode": "in-process"
