@@ -163,7 +163,7 @@
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "opus[1m]",
+  "model": "claude-opus-4-6[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
   "hooks": {
