@@ -242,6 +242,7 @@
     "orchestration@motlin-claude-code-plugins": true,
     "plugin-and-skill-dev@motlin-claude-code-plugins": true,
     "pushover@motlin-claude-code-plugins": true,
+    "stop-phrase-guard@motlin-claude-code-plugins": true,
     "temporal-data@motlin-claude-code-plugins": true,
     "tmux-titles@motlin-claude-code-plugins": true,
     "worktree-setup@motlin-claude-code-plugins": true
