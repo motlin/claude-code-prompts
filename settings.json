@@ -119,6 +119,7 @@
       "WebFetch(domain:www.javadoc.io)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:www.prisma.io)",
+      "mcp__agent-browser__*",
       "mcp__chrome-devtools__*",
       "mcp__claude_ai_Gmail__get_thread",
       "mcp__claude_ai_Gmail__gmail_get_profile",
