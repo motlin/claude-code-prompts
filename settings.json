@@ -295,9 +295,10 @@
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "teammateMode": "in-process",
-  "voiceEnabled": true,
   "theme": "dark-daltonized",
+  "verbose": true,
   "preferredNotifChannel": "ghostty",
-  "fileCheckpointingEnabled": false
+  "fileCheckpointingEnabled": false,
+  "teammateMode": "in-process",
+  "voiceEnabled": true
 }
