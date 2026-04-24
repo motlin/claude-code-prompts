@@ -263,7 +263,8 @@
     "git-guards@motlin-claude-code-plugins": true,
     "plugin-and-skill-dev@motlin-claude-code-plugins": true,
     "temporal-data@motlin-claude-code-plugins": true,
-    "stop-phrase-guard@motlin-claude-code-plugins": true
+    "stop-phrase-guard@motlin-claude-code-plugins": true,
+    "chrome-devtools-mcp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-reflect-marketplace": {
