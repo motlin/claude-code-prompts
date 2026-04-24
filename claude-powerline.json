@@ -26,12 +26,8 @@
             "showAheadBehind": false
           },
           "tmux": {
-            "enabled": true
-          }
-        }
-      },
-      {
-        "segments": {
+            "enabled": false
+          },
           "model": {
             "enabled": true
           },
@@ -57,10 +53,6 @@
           "weekly": {
             "enabled": true,
             "displayStyle": "text"
-          },
-          "sessionId": {
-            "enabled": true,
-            "showIdLabel": true
           },
           "env": {
             "enabled": true,
