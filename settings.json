@@ -182,38 +182,7 @@
   "model": "claude-opus-4-6[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r '\"[\" + (now | todate) + \"] \" + .tool_input.command' >> ~/.claude/bash-commands.log"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "CMD=$(jq -r '.tool_input.command'); if echo \"$CMD\" | grep -qE 'rm[[:space:]]+-[^[:space:]]*[rR]|rm[[:space:]]+--recursive'; then echo 'BLOCKED: Use trash instead of rm -r' >&2; exit 2; fi"
-          },
-          {
-            "type": "command",
-            "command": "CMD=$(jq -r '.tool_input.command'); if echo \"$CMD\" | grep -qE 'git[[:space:]]+push.*(main|master)'; then echo 'BLOCKED: Use feature branches, not direct push to main' >&2; exit 2; fi"
-          },
-          {
-            "type": "command",
-            "command": "CMD=$(jq -r '.tool_input.command'); if echo \"$CMD\" | grep -qE 'git[[:space:]]+push.*--force' && ! echo \"$CMD\" | grep -qE '\\-\\-force-with-lease'; then echo 'BLOCKED: Use --force-with-lease instead of --force' >&2; exit 2; fi"
-          }
-        ]
-      }
-    ]
-  },
+  "hooks": {},
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline-command.sh",
@@ -248,8 +217,8 @@
     "mcp-server-dev@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
     "plugin-dev@claude-plugins-official": true,
-    "remember@claude-plugins-official": true,
-    "serena@claude-plugins-official": true,
+    "remember@claude-plugins-official": false,
+    "serena@claude-plugins-official": false,
     "skill-creator@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "humanizer@skills-curated": true,
@@ -264,7 +233,9 @@
     "plugin-and-skill-dev@motlin-claude-code-plugins": true,
     "temporal-data@motlin-claude-code-plugins": true,
     "stop-phrase-guard@motlin-claude-code-plugins": true,
-    "chrome-devtools-mcp@claude-plugins-official": true
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "bash-audit-log@motlin-claude-code-plugins": true,
+    "bash-guards@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
     "claude-reflect-marketplace": {
@@ -276,7 +247,7 @@
     "motlin-claude-code-plugins": {
       "source": {
         "source": "directory",
-        "path": "/Users/craig/.dotfiles/git-clones/motlin/claude-code-plugins"
+        "path": "/Users/craig/projects/claude-code-plugins"
       }
     },
     "claude-plugins-official": {
