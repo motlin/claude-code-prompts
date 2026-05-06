@@ -255,8 +255,8 @@
     },
     "motlin-claude-code-plugins": {
       "source": {
-        "source": "directory",
-        "path": "/Users/craig/projects/claude-code-plugins"
+        "source": "github",
+        "repo": "motlin/claude-code-plugins"
       }
     },
     "claude-plugins-official": {
