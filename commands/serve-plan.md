@@ -9,15 +9,19 @@ The user provided: $ARGUMENTS
 ## Instructions
 
 1. Check if the server is running:
+
    ```
    curl -s http://localhost:8899/api/count
    ```
+
    If this fails, tell the user to start it with `just dev` in `~/projects/claude-code-plans/` or install the launchd service with `just launchd-install`.
 
 2. Get the Tailscale hostname:
+
    ```
    tailscale status --self --json | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['Self']['DNSName'].rstrip('.'))"
    ```
+
    If Tailscale is not available, fall back to `localhost`.
 
 3. Report to the user:

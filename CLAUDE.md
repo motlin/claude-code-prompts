@@ -1,4 +1,5 @@
 Always use these skills immediately on start-up:
+
 - @orchestration:orchestration
 - @orchestration:conversation-style
 - @orchestration:llm-context
@@ -19,9 +20,9 @@ When the user asks a question, ANSWER it first. Questions are not rhetorical and
 ## Dev server verification
 
 After starting any dev server (`npm run dev`, `vite`, `next dev`, etc.), VERIFY it before telling me to look at it:
+
 1. `lsof -i -P -n | grep LISTEN` on the expected port — startup logs can lie when another process already holds a conflicting binding (common on macOS with IPv4 vs IPv6 vs `[::1]`).
 2. `curl -sI http://localhost:PORT/` (or a known route) and confirm a non-error response.
 3. Only then open the browser or tell me it's up. If the port is contested, say so — don't silently report success.
 
 Build using red/green TDD.
-

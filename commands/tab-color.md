@@ -17,6 +17,7 @@ This should be a color description like "yellow", "blue", "red", "orange", "purp
    - If it doesn't exist, create it with just the `TAB_COLOR` export
 
 3. The format should be:
+
    ```
    export TAB_COLOR='R,G,B'
    ```
