@@ -1,85 +1,85 @@
 {
-  "theme": "light",
-  "display": {
-    "style": "powerline",
-    "charset": "unicode",
-    "colorCompatibility": "auto",
-    "autoWrap": true,
-    "padding": 0,
-    "lines": [
-      {
-        "segments": {
-          "directory": {
-            "enabled": true,
-            "showBasename": true
-          },
-          "git": {
-            "enabled": true,
-            "showSha": true,
-            "showWorkingTree": true,
-            "showOperation": true,
-            "showTag": true,
-            "showTimeSinceCommit": false,
-            "showStashCount": false,
-            "showUpstream": false,
-            "showRepoName": false,
-            "showAheadBehind": false
-          },
-          "tmux": {
-            "enabled": false
-          },
-          "model": {
-            "enabled": true
-          },
-          "version": {
-            "enabled": true
-          },
-          "metrics": {
-            "enabled": true,
-            "showResponseTime": false,
-            "showLastResponseTime": false,
-            "showDuration": true,
-            "showMessageCount": true,
-            "showLinesAdded": false,
-            "showLinesRemoved": false
-          },
-          "context": {
-            "enabled": true,
-            "showPercentageOnly": true,
-            "displayStyle": "text",
-            "percentageMode": "used",
-            "autocompactBuffer": 33000
-          },
-          "weekly": {
-            "enabled": true,
-            "displayStyle": "text"
-          },
-          "env": {
-            "enabled": true,
-            "variable": "TASKS",
-            "prefix": "📋"
-          }
-        }
-      }
-    ]
-  },
-  "budget": {
-    "session": {
-      "warningThreshold": 80
-    },
-    "today": {
-      "warningThreshold": 80,
-      "amount": 5
-    },
-    "block": {
-      "warningThreshold": 80,
-      "amount": 20000000,
-      "type": "tokens"
-    }
-  },
-  "modelContextLimits": {
-    "default": 1000000,
-    "sonnet": 1000000,
-    "opus": 1000000
-  }
+	"theme": "light",
+	"display": {
+		"style": "powerline",
+		"charset": "unicode",
+		"colorCompatibility": "auto",
+		"autoWrap": true,
+		"padding": 0,
+		"lines": [
+			{
+				"segments": {
+					"directory": {
+						"enabled": true,
+						"showBasename": true
+					},
+					"git": {
+						"enabled": true,
+						"showSha": true,
+						"showWorkingTree": true,
+						"showOperation": true,
+						"showTag": true,
+						"showTimeSinceCommit": false,
+						"showStashCount": false,
+						"showUpstream": false,
+						"showRepoName": false,
+						"showAheadBehind": false
+					},
+					"tmux": {
+						"enabled": false
+					},
+					"model": {
+						"enabled": true
+					},
+					"version": {
+						"enabled": true
+					},
+					"metrics": {
+						"enabled": true,
+						"showResponseTime": false,
+						"showLastResponseTime": false,
+						"showDuration": true,
+						"showMessageCount": true,
+						"showLinesAdded": false,
+						"showLinesRemoved": false
+					},
+					"context": {
+						"enabled": true,
+						"showPercentageOnly": true,
+						"displayStyle": "text",
+						"percentageMode": "used",
+						"autocompactBuffer": 33000
+					},
+					"weekly": {
+						"enabled": true,
+						"displayStyle": "text"
+					},
+					"env": {
+						"enabled": true,
+						"variable": "TASKS",
+						"prefix": "📋"
+					}
+				}
+			}
+		]
+	},
+	"budget": {
+		"session": {
+			"warningThreshold": 80
+		},
+		"today": {
+			"warningThreshold": 80,
+			"amount": 5
+		},
+		"block": {
+			"warningThreshold": 80,
+			"amount": 20000000,
+			"type": "tokens"
+		}
+	},
+	"modelContextLimits": {
+		"default": 1000000,
+		"sonnet": 1000000,
+		"opus": 1000000
+	}
 }

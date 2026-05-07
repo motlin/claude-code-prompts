@@ -13,14 +13,14 @@ This should be a color description like "yellow", "blue", "red", "orange", "purp
 1. Convert the color description to an RGB value.
 
 2. Check if `.envrc` already exists in the current directory:
-   - If it exists, read it and add/update the `TAB_COLOR` export
-   - If it doesn't exist, create it with just the `TAB_COLOR` export
+    - If it exists, read it and add/update the `TAB_COLOR` export
+    - If it doesn't exist, create it with just the `TAB_COLOR` export
 
 3. The format should be:
 
-   ```
-   export TAB_COLOR='R,G,B'
-   ```
+    ```
+    export TAB_COLOR='R,G,B'
+    ```
 
 Example: export TAB_COLOR='41,56,140'
 
