@@ -227,7 +227,6 @@
 		"mcp-server-dev@claude-plugins-official": true,
 		"playwright@claude-plugins-official": true,
 		"plugin-dev@claude-plugins-official": true,
-		"remember@claude-plugins-official": false,
 		"serena@claude-plugins-official": false,
 		"skill-creator@claude-plugins-official": true,
 		"typescript-lsp@claude-plugins-official": true,
