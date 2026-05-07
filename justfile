@@ -10,10 +10,11 @@ lint:
     git ls-files '*.md' | xargs markdownlint-cli2 --no-globs
     git ls-files '*.yaml' '*.yml' '.yamllint' | xargs yamllint --strict
 
-# Check shell script and oxfmt formatting
+# Format shell scripts and JSON; fail if anything changed
 format:
-    git ls-files '*.sh' | xargs shfmt -d --indent 4 --binary-next-line --case-indent
-    oxfmt --check
+    git ls-files '*.sh' | xargs shfmt -w --indent 4 --binary-next-line --case-indent
+    oxfmt
+    git diff --exit-code
 
 # Run all pre-commit checks
 precommit: format lint
