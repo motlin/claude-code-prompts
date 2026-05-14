@@ -10,6 +10,7 @@
 		"CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
 		"CLAUDE_CODE_ENABLE_TELEMETRY": "1",
 		"CLAUDE_CODE_ENHANCED_TELEMETRY_BETA": "1",
+		"CLAUDE_CODE_PLUGIN_PREFER_HTTPS": "1",
 		"OTEL_METRICS_EXPORTER": "otlp",
 		"OTEL_LOGS_EXPORTER": "otlp",
 		"OTEL_TRACES_EXPORTER": "otlp",
@@ -202,6 +203,9 @@
 	"enableAllProjectMcpServers": false,
 	"enabledMcpjsonServers": [],
 	"hooks": {},
+	"worktree": {
+		"baseRef": "fresh"
+	},
 	"statusLine": {
 		"type": "command",
 		"command": "~/.claude/statusline-command.sh",
@@ -266,6 +270,7 @@
 		}
 	},
 	"alwaysThinkingEnabled": true,
+	"effortLevel": "high",
 	"autoUpdatesChannel": "latest",
 	"tui": "fullscreen",
 	"skipDangerousModePermissionPrompt": true,
