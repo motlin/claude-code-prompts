@@ -10,7 +10,7 @@
 			{
 				"segments": {
 					"directory": {
-						"enabled": true,
+						"enabled": false,
 						"showBasename": true
 					},
 					"git": {
@@ -22,7 +22,7 @@
 						"showTimeSinceCommit": false,
 						"showStashCount": false,
 						"showUpstream": false,
-						"showRepoName": false,
+						"showRepoName": true,
 						"showAheadBehind": false
 					},
 					"tmux": {
