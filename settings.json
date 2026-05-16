@@ -23,6 +23,7 @@
 		"OTEL_LOGS_EXPORT_INTERVAL": "5000"
 	},
 	"includeCoAuthoredBy": false,
+	"includeGitInstructions": false,
 	"permissions": {
 		"allow": [
 			"Bash",
