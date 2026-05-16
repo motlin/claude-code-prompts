@@ -26,3 +26,12 @@ image-cache/
 channels/
 .llm/
 learnings-backups/
+daemon/
+daemon.lock
+daemon.log
+daemon.status.json
+daemon-auth-cooldown
+daemon-auth-status.json
+jobs/
+stats-cache.json
+gh-pr-status-cache.json
