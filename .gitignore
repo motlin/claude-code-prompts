@@ -35,3 +35,6 @@ daemon-auth-status.json
 jobs/
 stats-cache.json
 gh-pr-status-cache.json
+remote-settings.json
+.last-update-result.json
+policy-limits.json
