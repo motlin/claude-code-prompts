@@ -7,6 +7,7 @@ Always use these skills immediately on start-up:
 - @code:code-quality
 - @git:git-workflow
 - @build:precommit
+- @recap:recap
 
 My time is valuable. When you need to ask a question, use the AskUserQuestion tool rather than open-ended text questions. Provide 3 suggested options so I can quickly select one. The tool automatically adds an "Other" option for custom input.
 
