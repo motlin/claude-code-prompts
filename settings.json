@@ -255,7 +255,7 @@
     "skill-creator@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "humanizer@skills-curated": true,
-    "skill-extractor@skills-curated": false,
+    "skill-extractor@skills-curated": true,
     "context7@claude-plugins-official": true,
     "imessage@claude-plugins-official": true,
     "chrome-devtools-mcp@claude-plugins-official": true,
@@ -282,7 +282,11 @@
     "caveman@caveman": true,
     "frontend-design@claude-plugins-official": true,
     "mattpocock-skills@mattpocock": true,
-    "daydream@glebis-skills": true
+    "daydream@glebis-skills": true,
+    "tmux-resume@motlin-claude-code-plugins": true,
+    "investigation-report@motlin-claude-code-plugins": true,
+    "tmux-reboot@motlin-claude-code-plugins": true,
+    "recap@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
     "claude-reflect-marketplace": {
@@ -354,5 +358,6 @@
   "autoCompactEnabled": true,
   "fileCheckpointingEnabled": false,
   "teammateMode": "in-process",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "model": "opus[1m]"
 }
