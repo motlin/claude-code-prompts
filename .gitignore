@@ -8,6 +8,8 @@ ide
 paste-cache/
 plans
 plugins/
+hooks/
+skills/
 projects/
 session-named/
 shell-snapshots

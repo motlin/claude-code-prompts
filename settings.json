@@ -2,26 +2,26 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 90,
   "env": {
+    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_PLUGIN_PREFER_HTTPS": "1",
+    "CLAUDE_CODE_WORKFLOWS": "1",
     "DISABLE_BUG_COMMAND": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
     "DISABLE_TELEMETRY": "1",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
-    "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA": "1",
-    "CLAUDE_CODE_PLUGIN_PREFER_HTTPS": "1",
-    "CLAUDE_CODE_WORKFLOWS": "1",
-    "OTEL_METRICS_EXPORTER": "otlp",
-    "OTEL_LOGS_EXPORTER": "otlp",
-    "OTEL_TRACES_EXPORTER": "otlp",
-    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
     "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318",
     "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE": "cumulative",
-    "OTEL_LOG_USER_PROMPTS": "1",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+    "OTEL_LOGS_EXPORTER": "otlp",
+    "OTEL_LOGS_EXPORT_INTERVAL": "5000",
     "OTEL_LOG_TOOL_DETAILS": "1",
+    "OTEL_LOG_USER_PROMPTS": "1",
+    "OTEL_METRICS_EXPORTER": "otlp",
     "OTEL_METRIC_EXPORT_INTERVAL": "10000",
-    "OTEL_LOGS_EXPORT_INTERVAL": "5000"
+    "OTEL_TRACES_EXPORTER": "otlp"
   },
   "includeCoAuthoredBy": false,
   "includeGitInstructions": false,
@@ -238,7 +238,20 @@
   },
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
-  "hooks": {},
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/craig/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "worktree": {
     "baseRef": "fresh"
   },
@@ -248,50 +261,52 @@
     "padding": 0
   },
   "enabledPlugins": {
-    "claude-md-management@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "hookify@claude-plugins-official": true,
-    "plugin-dev@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "humanizer@skills-curated": true,
-    "skill-extractor@skills-curated": true,
-    "context7@claude-plugins-official": true,
-    "imessage@claude-plugins-official": true,
-    "chrome-devtools-mcp@claude-plugins-official": true,
-    "markdown-tasks@motlin-claude-code-plugins": true,
-    "tmux-titles@motlin-claude-code-plugins": true,
-    "iterm2-titles@motlin-claude-code-plugins": true,
+    "bash-guards@motlin-claude-code-plugins": true,
     "build@motlin-claude-code-plugins": true,
     "builtin-tasks@motlin-claude-code-plugins": true,
+    "caveman@caveman": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "claude-code-plans@motlin-claude-code-plugins": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-mem@thedotmack": true,
+    "code-simplifier@claude-plugins-official": true,
     "code@motlin-claude-code-plugins": true,
+    "context7@claude-plugins-official": true,
+    "daydream@glebis-skills": true,
+    "frontend-design@claude-plugins-official": true,
     "ghostty-titles@motlin-claude-code-plugins": true,
+    "git-guards@motlin-claude-code-plugins": true,
     "git@motlin-claude-code-plugins": true,
     "github@motlin-claude-code-plugins": true,
+    "gtd@workflowy-gtd": true,
+    "hookify@claude-plugins-official": true,
+    "humanizer@skills-curated": true,
+    "imessage@claude-plugins-official": true,
+    "investigation-report@motlin-claude-code-plugins": true,
+    "iterm2-titles@motlin-claude-code-plugins": true,
     "java@motlin-claude-code-plugins": true,
     "justfile@motlin-claude-code-plugins": true,
-    "orchestration@motlin-claude-code-plugins": true,
-    "worktree-setup@motlin-claude-code-plugins": true,
-    "claude-code-plans@motlin-claude-code-plugins": true,
-    "git-guards@motlin-claude-code-plugins": true,
-    "plugin-and-skill-dev@motlin-claude-code-plugins": true,
-    "temporal-data@motlin-claude-code-plugins": true,
-    "stop-phrase-guard@motlin-claude-code-plugins": true,
-    "bash-guards@motlin-claude-code-plugins": true,
-    "claude-mem@thedotmack": true,
-    "caveman@caveman": true,
-    "frontend-design@claude-plugins-official": true,
+    "markdown-tasks@motlin-claude-code-plugins": true,
     "mattpocock-skills@mattpocock": true,
-    "daydream@glebis-skills": true,
-    "investigation-report@motlin-claude-code-plugins": true,
+    "orchestration@motlin-claude-code-plugins": true,
+    "plugin-and-skill-dev@motlin-claude-code-plugins": true,
+    "plugin-dev@claude-plugins-official": true,
+    "recap@motlin-claude-code-plugins": true,
+    "skill-creator@claude-plugins-official": true,
+    "skill-extractor@skills-curated": true,
+    "stop-phrase-guard@motlin-claude-code-plugins": true,
+    "temporal-data@motlin-claude-code-plugins": true,
     "tmux-reboot@motlin-claude-code-plugins": true,
-    "recap@motlin-claude-code-plugins": true
+    "tmux-titles@motlin-claude-code-plugins": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "workflowy@workflowy-gtd": true,
+    "worktree-setup@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
-    "claude-reflect-marketplace": {
+    "caveman": {
       "source": {
         "source": "github",
-        "repo": "bayramannakov/claude-reflect"
+        "repo": "motlin/caveman"
       }
     },
     "claude-plugins-official": {
@@ -301,22 +316,16 @@
       },
       "autoUpdate": true
     },
-    "skills-curated": {
+    "claude-reflect-marketplace": {
       "source": {
         "source": "github",
-        "repo": "trailofbits/skills-curated"
+        "repo": "bayramannakov/claude-reflect"
       }
     },
-    "motlin-claude-code-plugins": {
+    "glebis-skills": {
       "source": {
         "source": "github",
-        "repo": "motlin/claude-code-plugins"
-      }
-    },
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "motlin/caveman"
+        "repo": "glebis/claude-skills"
       }
     },
     "mattpocock": {
@@ -325,10 +334,16 @@
         "repo": "mattpocock/skills"
       }
     },
-    "glebis-skills": {
+    "motlin-claude-code-plugins": {
       "source": {
         "source": "github",
-        "repo": "glebis/claude-skills"
+        "repo": "motlin/claude-code-plugins"
+      }
+    },
+    "skills-curated": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills-curated"
       }
     }
   },
@@ -357,6 +372,5 @@
   "autoCompactEnabled": true,
   "fileCheckpointingEnabled": false,
   "teammateMode": "in-process",
-  "voiceEnabled": true,
-  "model": "opus[1m]"
+  "voiceEnabled": true
 }
