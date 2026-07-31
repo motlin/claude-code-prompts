@@ -1,3 +1,9 @@
 # 🤖 `claude` code configuration
 
-My development workflow revolves around a markdown todo list and custom commands and agents that work through the todo list. I wrote about my [development workflow with Claude Code](https://motlin.com/blog/claude-code-configuration) on motlin.com, and walk through the contents of the files there.
+This repository stores my user-level Claude Code settings, status line, and personal instructions.
+Reusable commands, agents, skills, and hooks live in
+[`motlin/claude-code-plugins`](https://github.com/motlin/claude-code-plugins); this configuration
+selects and configures those plugins.
+
+I wrote about the workflow's earlier command-based form in
+[Claude Code Configuration](https://motlin.com/blog/claude-code-configuration).
