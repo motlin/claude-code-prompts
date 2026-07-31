@@ -1,13 +1,4 @@
-Always use these skills immediately on start-up:
-
-- @orchestration:orchestration
-- @orchestration:conversation-style
-- @orchestration:llm-context
-- @code:cli
-- @code:code-quality
-- @git:git-workflow
-- @build:precommit
-- @recap:recap
+Always use the @orchestration:orchestration skill for core guidelines and workflow automation.
 
 My time is valuable. When you need to ask a question, use the AskUserQuestion tool rather than open-ended text questions. Provide 3 suggested options so I can quickly select one. The tool automatically adds an "Other" option for custom input.
 
