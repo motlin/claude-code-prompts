@@ -17,4 +17,4 @@ if [[ -n "$CWD" ]]; then
     [[ "$COUNT" -gt 0 ]] && export TASKS="$COUNT"
 fi
 
-echo "$INPUT" | npx -y @owloops/claude-powerline@1.25.2 --theme=tokyo-night --style=capsule
+echo "$INPUT" | npx -y @owloops/claude-powerline@1.25.2

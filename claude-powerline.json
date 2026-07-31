@@ -1,7 +1,7 @@
 {
-	"theme": "light",
+	"theme": "tokyo-night",
 	"display": {
-		"style": "powerline",
+		"style": "capsule",
 		"charset": "unicode",
 		"colorCompatibility": "auto",
 		"autoWrap": true,
