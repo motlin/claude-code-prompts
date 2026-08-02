@@ -241,20 +241,7 @@
   },
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash '/Users/craig/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10
-          }
-        ]
-      }
-    ]
-  },
+  "hooks": {},
   "worktree": {
     "baseRef": "fresh"
   },
@@ -282,6 +269,7 @@
     "git@motlin-claude-code-plugins": true,
     "github@motlin-claude-code-plugins": true,
     "gtd@workflowy-gtd": true,
+    "herdr-titles@motlin-claude-code-plugins": true,
     "hookify@claude-plugins-official": true,
     "humanizer@skills-curated": true,
     "imessage@claude-plugins-official": true,
