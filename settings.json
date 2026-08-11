@@ -2,7 +2,6 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 90,
   "env": {
-    "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
     "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
     "CLAUDE_CODE_ENHANCED_TELEMETRY_BETA": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
@@ -170,7 +169,6 @@
       "mcp__gmail__search_emails",
       "mcp__imcp__*",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__*",
-      "mcp__plugin_claude-mem_mcp-search__get_observations",
       "mcp__plugin_context7_context7__*",
       "mcp__plugin_playwright_playwright__*",
       "mcp__plugin_playwright_playwright__browser_click",
@@ -239,9 +237,23 @@
     "defaultMode": "plan",
     "disableBypassPermissionsMode": "disable"
   },
+  "model": "opus[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
-  "hooks": {},
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/craig/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "worktree": {
     "baseRef": "fresh"
   },
@@ -258,23 +270,22 @@
     "chrome-devtools-mcp@claude-plugins-official": true,
     "claude-code-plans@motlin-claude-code-plugins": true,
     "claude-md-management@claude-plugins-official": true,
-    "claude-mem@thedotmack": true,
+    "claude-reflect@claude-reflect-marketplace": true,
     "code-simplifier@claude-plugins-official": true,
     "code@motlin-claude-code-plugins": true,
     "context7@claude-plugins-official": true,
     "daydream@glebis-skills": true,
     "frontend-design@claude-plugins-official": true,
-    "ghostty-titles@motlin-claude-code-plugins": true,
     "git-guards@motlin-claude-code-plugins": true,
     "git@motlin-claude-code-plugins": true,
     "github@motlin-claude-code-plugins": true,
     "gtd@workflowy-gtd": true,
+    "herdr-reboot@motlin-claude-code-plugins": true,
     "herdr-titles@motlin-claude-code-plugins": true,
     "hookify@claude-plugins-official": true,
     "humanizer@skills-curated": true,
     "imessage@claude-plugins-official": true,
     "investigation-report@motlin-claude-code-plugins": true,
-    "iterm2-titles@motlin-claude-code-plugins": true,
     "java@motlin-claude-code-plugins": true,
     "justfile@motlin-claude-code-plugins": true,
     "markdown-tasks@motlin-claude-code-plugins": true,
@@ -287,8 +298,7 @@
     "skill-extractor@skills-curated": true,
     "stop-phrase-guard@motlin-claude-code-plugins": true,
     "temporal-data@motlin-claude-code-plugins": true,
-    "tmux-reboot@motlin-claude-code-plugins": true,
-    "tmux-titles@motlin-claude-code-plugins": true,
+    "tmux-reboot@motlin-claude-code-plugins": false,
     "typescript-lsp@claude-plugins-official": true,
     "workflowy@workflowy-gtd": true,
     "worktree-setup@motlin-claude-code-plugins": true
