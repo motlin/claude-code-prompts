@@ -234,10 +234,9 @@
       "Edit(~/.zshrc)",
       "Read(~/.ssh/**)"
     ],
-    "defaultMode": "plan",
+    "defaultMode": "auto",
     "disableBypassPermissionsMode": "disable"
   },
-  "model": "opus[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
   "hooks": {
