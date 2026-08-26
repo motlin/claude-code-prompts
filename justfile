@@ -1,5 +1,3 @@
-set shell := ["bash", "-O", "globstar", "-c"]
-
 # `just --list --unsorted`
 default:
     @just --list --unsorted
