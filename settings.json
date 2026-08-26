@@ -230,6 +230,7 @@
     "defaultMode": "auto",
     "disableBypassPermissionsMode": "disable"
   },
+  "model": "claude-fable-5[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
   "hooks": {
@@ -365,5 +366,39 @@
   "autoCompactEnabled": true,
   "fileCheckpointingEnabled": false,
   "teammateMode": "in-process",
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: Not queryable here (org/repo not derivable from the origin remote — MotlinGitHub host); assume private unless later shown otherwise",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: Default branch is `main`; protected-branch/ruleset status not queryable here (gh lookup unavailable for this remote)",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo (liftwizard/liftwizard via `origin`/`upstream` on MotlinGitHub) and the user's personal fork remotes (`mattdepaula`, `tifany` on github.com) — no additional orgs configured",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar; CI secret names referenced in this repo's workflows include CENTRAL_TOKEN_PASSWORD, CENTRAL_TOKEN_USERNAME, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, GITHUB_TOKEN, GPG_PASSPHRASE, GPG_PRIVATE_KEY, RELEASE_TOKEN (names only, not values)",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited — e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "**Repository visibility**: PUBLIC — motlin/herdr-web (confirmed via gh)",
+      "**Default / protected branches**: Default branch is `main`; no rulesets and no protected branches listed (gh-confirmed)",
+      "**Source control**: The trusted repo (motlin/herdr-web via `origin`) and `upstream` (kcosr/herdr-web) on github.com — no additional orgs configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar; `.envrc` in this repo may hold local secrets — treat as sensitive",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: This repo (liftwizard/liftwizard, worktree at /Users/craig/projects/liftwizard/.claude/worktrees/immutable-brewing-sedgewick) and its configured remotes (`origin`/`upstream` → MotlinGitHub:liftwizard/liftwizard.git, plus personal fork remotes `mattdepaula` and `tifany` on github.com); visibility unconfirmed so treat as private-by-default for confidential material, but secrets/credentials are never cleared into it regardless",
+      "**Org-specific CLIs**: None configured",
+      "routine under liftwizard/ prefix: git and build operations (mvn/maven, git) scoped to this repo's own remotes only",
+      "**Trusted repo**: This repo (motlin/herdr-web, public) at /Users/craig/projects/herdr-web and its remotes `origin` (motlin/herdr-web) and `upstream` (kcosr/herdr-web) on github.com; repo is public so only this repo's own work is OK to push there — content ported or first read from elsewhere is not; secrets/credentials are never cleared into it regardless of visibility",
+      "routine under herdr-web/ prefix: git, herdr CLI, mise, npx, and build/test/lint operations (per Makefile/justfile and package.json targets) scoped to this repo's own remotes only"
+    ]
+  },
   "voiceEnabled": true
 }
