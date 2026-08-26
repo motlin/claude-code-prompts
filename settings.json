@@ -294,7 +294,12 @@
     "tmux-reboot@motlin-claude-code-plugins": false,
     "typescript-lsp@claude-plugins-official": true,
     "workflowy@workflowy-gtd": true,
-    "worktree-setup@motlin-claude-code-plugins": true
+    "worktree-setup@motlin-claude-code-plugins": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "mcp-server-dev@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "yepnope@yepnope": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -338,6 +343,12 @@
       "source": {
         "source": "github",
         "repo": "trailofbits/skills-curated"
+      }
+    },
+    "yepnope": {
+      "source": {
+        "source": "github",
+        "repo": "motlin/yepnope"
       }
     }
   },
