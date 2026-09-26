@@ -240,13 +240,26 @@
     "defaultMode": "auto",
     "disableBypassPermissionsMode": "disable"
   },
-  "model": "claude-fable-5[1m]",
   "enableAllProjectMcpServers": false,
   "enabledMcpjsonServers": [],
+  "skillOverrides": {
+    "agents-sdk": "off",
+    "cloudflare": "off",
+    "cloudflare-email-service": "off",
+    "cloudflare-one": "off",
+    "cloudflare-one-migrations": "off",
+    "durable-objects": "off",
+    "gh-stack": "off",
+    "sandbox-sdk": "off",
+    "turnstile-spin": "off",
+    "web-perf": "off",
+    "workers-best-practices": "off",
+    "wrangler": "off"
+  },
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "*",
+        "matcher": "^(startup|resume|clear|compact|fork)$",
         "hooks": [
           {
             "type": "command",
@@ -264,20 +277,6 @@
     "type": "command",
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
-  },
-  "skillOverrides": {
-    "agents-sdk": "off",
-    "cloudflare": "off",
-    "cloudflare-email-service": "off",
-    "cloudflare-one": "off",
-    "cloudflare-one-migrations": "off",
-    "durable-objects": "off",
-    "gh-stack": "off",
-    "sandbox-sdk": "off",
-    "turnstile-spin": "off",
-    "web-perf": "off",
-    "workers-best-practices": "off",
-    "wrangler": "off"
   },
   "enabledPlugins": {
     "bash-guards@motlin-claude-code-plugins": true,
@@ -323,7 +322,8 @@
     "github@claude-plugins-official": true,
     "mcp-server-dev@claude-plugins-official": false,
     "playwright@claude-plugins-official": true,
-    "yepnope@yepnope": true
+    "yepnope@yepnope": true,
+    "demo@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -401,6 +401,8 @@
   "autoCompactEnabled": true,
   "fileCheckpointingEnabled": false,
   "teammateMode": "in-process",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
