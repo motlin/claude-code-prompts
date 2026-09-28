@@ -40,3 +40,5 @@ gh-pr-status-cache.json
 remote-settings.json
 .last-update-result.json
 policy-limits.json
+state/
+bridge-spawn/
