@@ -220,7 +220,7 @@
       "Bash(git pushf)",
       "Bash(git pushf:*)",
       "Bash(git * pushf)",
-      "Bash(git * pushf:*)",
+      "Bash(git * pushf*)",
       "Bash(git push *--force*)",
       "Bash(git * push *--force*)",
       "Bash(git push *-f)",
