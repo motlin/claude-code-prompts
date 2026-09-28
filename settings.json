@@ -23,6 +23,9 @@
     "OTEL_METRIC_EXPORT_INTERVAL": "10000",
     "OTEL_TRACES_EXPORTER": "otlp"
   },
+  "attribution": {
+    "sessionUrl": false
+  },
   "includeCoAuthoredBy": false,
   "includeGitInstructions": false,
   "permissions": {
