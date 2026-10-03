@@ -331,7 +331,8 @@
     "demo@motlin-claude-code-plugins": true,
     "plans-dashboard@motlin-claude-code-plugins": true,
     "code-walkthrough@motlin-claude-code-plugins": true,
-    "narration@motlin-claude-code-plugins": true
+    "narration@motlin-claude-code-plugins": true,
+    "1password@1password": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -381,6 +382,12 @@
       "source": {
         "source": "github",
         "repo": "motlin/yepnope"
+      }
+    },
+    "1password": {
+      "source": {
+        "source": "github",
+        "repo": "1Password/1password-claude-plugin"
       }
     }
   },
