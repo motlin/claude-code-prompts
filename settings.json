@@ -328,7 +328,10 @@
     "mcp-server-dev@claude-plugins-official": false,
     "playwright@claude-plugins-official": true,
     "yepnope@yepnope": true,
-    "demo@motlin-claude-code-plugins": true
+    "demo@motlin-claude-code-plugins": true,
+    "plans-dashboard@motlin-claude-code-plugins": true,
+    "code-walkthrough@motlin-claude-code-plugins": true,
+    "narration@motlin-claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
