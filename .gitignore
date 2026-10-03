@@ -38,6 +38,7 @@ jobs/
 stats-cache.json
 gh-pr-status-cache.json
 remote-settings.json
+.last-cleanup
 .last-update-result.json
 policy-limits.json
 state/
